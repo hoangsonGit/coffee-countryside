@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalConstant } from './shared/constants/global-constants';
+import { RoutingConstant } from './shared/constants/routing-constants';
 
 @Component({
   selector: 'app-root',
@@ -11,18 +13,18 @@ export class AppComponent implements OnInit{
   constructor(
     private router: Router
   ) {
-    
+
   }
 
   ngOnInit(): void {
-    
+
   }
-  title = 'coffee-contryside';
+  title = GlobalConstant.TITLE;
 
   isHidden: boolean = false;
 
   login() {
     this.isHidden = true;
-    this.router.navigate(['login']);
+    this.router.navigate([RoutingConstant.LOGIN]);
   }
 }
