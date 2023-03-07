@@ -1,1 +1,13 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <div class="banner">
+    <h3>Not the state, also the space</h3>
+    <p>Let's enjoy with Coffee Countryside</p>
+  </div>
+
+  <div class="content" role="main">
+    <div class="card-container" *ngFor="let item of products">
+      <a class="card" target="_blank" rel="noopener">
+        <span>{{item}}</span>   </a>
+    </div>
+  </div>
+</div>

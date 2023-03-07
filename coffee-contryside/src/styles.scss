@@ -38,7 +38,7 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: #776bcc;
   color: white;
   font-weight: 600;
 }
@@ -64,11 +64,7 @@ p {
 
 .content {
   display: flex;
-  margin: 82px auto 32px;
-  padding: 0 16px;
-  max-width: 960px;
-  flex-direction: column;
-  align-items: center;
+  padding: 20px 16px;
 }
 
 svg.material-icons {
@@ -85,6 +81,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card-container {
+  height: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
