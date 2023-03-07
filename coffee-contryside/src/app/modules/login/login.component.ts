@@ -40,4 +40,8 @@ export class LoginComponent implements OnInit {
       this.errorMessage = "Invalid username or password.";
     }
   }
+
+  backToHome() {
+    this.router.navigate([RoutingConstant.DASHBOARD]);
+  }
 }

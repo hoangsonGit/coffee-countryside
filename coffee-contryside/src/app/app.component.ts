@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { GlobalConstant } from './shared/constants/global-constants';
+import { RoutingConstant } from './shared/constants/routing-constants';
 import { HeaderDisplayService } from './shared/header/services/header-display.service';
 
 @Component({
@@ -14,8 +15,18 @@ export class AppComponent implements OnInit{
   isHidden: boolean = false;
 
   constructor(
+    private router: Router,
     private headerDisplayService: HeaderDisplayService
   ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if(event.url.replace('/','') === RoutingConstant.LOGIN) {
+          headerDisplayService.setHeaderDisplay(true);
+        } else {
+          headerDisplayService.setHeaderDisplay(false);
+        }
+      }
+    });
   }
 
   ngOnInit(): void {

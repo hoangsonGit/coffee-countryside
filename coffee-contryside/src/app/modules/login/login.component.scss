@@ -7,7 +7,7 @@
   font-family: Raleway, sans-serif;
 }
 
-.container {
+.login-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,9 +28,8 @@
   position: relative;
   height: 100%;
   .coffee-logo {
-    padding: 100px 130px 0 135px;
-    width: 100px;
-    height: 100px;
+    margin: 85px 110px 0 110px;
+    width: 120px;
   }
   .login-error {
     padding-top: 20px;
@@ -134,14 +133,14 @@
   background: #fff;
   font-size: 14px;
   margin-top: 30px;
-  padding: 16px 20px;
+  padding: 10px 15px;
   border-radius: 26px;
   border: 1px solid #d4d3e8;
   text-transform: uppercase;
   font-weight: 700;
   display: flex;
   align-items: center;
-  width: 36%;
+  width: 43%;
   color: #4c489d;
   box-shadow: 0px 2px 2px #5c5696;
   cursor: pointer;
@@ -164,6 +163,7 @@
 }
 
 .social-login {
+  z-index: 1;
   position: absolute;
   height: 140px;
   width: 160px;
@@ -171,6 +171,11 @@
   bottom: 0px;
   right: 0px;
   color: #fff;
+  a {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 .social-icons {

@@ -8,6 +8,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { StaffManagementComponent } from './modules/staff-management/staff-management.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,11 @@ import { StaffManagementComponent } from './modules/staff-management/staff-manag
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     LoginModule,
-    DashboardModule
+    DashboardModule,
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
