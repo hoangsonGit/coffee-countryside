@@ -5,13 +5,16 @@ import { RoutingConstant } from './shared/constants/routing-constants';
 const routes: Routes = [
   {
     path: '',
-    // loadChildren: './modules/login/login.module#LoginModule',
-    loadChildren: () => import('./modules/login/login.module').then(x => x.LoginModule),
+    redirectTo: RoutingConstant.DASHBOARD,
     pathMatch: 'full'
   },
   {
-    path: RoutingConstant.DASHBOARD,
-    loadChildren: () => import('./modules/dashboard/dashboard.module').then(x => x.DashboardModule)
+    path: '',
+    loadChildren: () => import('./modules/login/login.module').then(x => x.LoginModule),
+  },
+  {
+    path: RoutingConstant.STAFF_MANAGEMENT,
+    loadChildren: () => import('./modules/staff-management/staff-management.module').then(x => x.StaffManagementModule)
   }
 ];
 

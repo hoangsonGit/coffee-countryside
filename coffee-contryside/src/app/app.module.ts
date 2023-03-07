@@ -7,11 +7,13 @@ import { LoginModule } from './modules/login/login.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { StaffManagementComponent } from './modules/staff-management/staff-management.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    StaffManagementComponent
   ],
   imports: [
     BrowserModule,

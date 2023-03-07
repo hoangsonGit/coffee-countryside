@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
 
     // Check validation
     if (usernameValue === this.username && passwordValue === this.password) {
-      this.router.navigate([RoutingConstant.DASHBOARD]);
+      this.router.navigate([RoutingConstant.STAFF_MANAGEMENT]);
     } else {
       this.errorMessage = "Invalid username or password.";
     }

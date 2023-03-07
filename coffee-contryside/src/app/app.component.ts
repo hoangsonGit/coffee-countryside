@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlobalConstant } from './shared/constants/global-constants';
-import { RoutingConstant } from './shared/constants/routing-constants';
+import { HeaderDisplayService } from './shared/header/services/header-display.service';
 
 @Component({
   selector: 'app-root',
@@ -10,21 +10,15 @@ import { RoutingConstant } from './shared/constants/routing-constants';
 })
 export class AppComponent implements OnInit{
 
-  constructor(
-    private router: Router
-  ) {
+  title = GlobalConstant.TITLE;
+  isHidden: boolean = false;
 
+  constructor(
+    private headerDisplayService: HeaderDisplayService
+  ) {
   }
 
   ngOnInit(): void {
-
-  }
-  title = GlobalConstant.TITLE;
-
-  isHidden: boolean = false;
-
-  login() {
-    this.isHidden = true;
-    this.router.navigate([RoutingConstant.LOGIN]);
+    this.headerDisplayService.isHidden.subscribe(value => this.isHidden = value);
   }
 }
