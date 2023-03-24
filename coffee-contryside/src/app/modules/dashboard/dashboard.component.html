@@ -4,10 +4,24 @@
     <p>Let's enjoy with Coffee Countryside</p>
   </div>
 
-  <div class="content" role="main">
-    <div class="card-container" *ngFor="let item of products">
-      <a class="card" target="_blank" rel="noopener">
-        <span>{{item}}</span>   </a>
+  <div class="card-container">
+    <div class="card" *ngFor="let item of products">
+      <div class="card-header">
+        <img src="assets/img/coffee.jpg" alt="" width="100%" height="100%">
+      </div>
+      <div class="card-content">
+        <div class="product-price">
+          200.000đ
+        </div>
+        <div class="product-title">
+          Cà Phê Sữa Đá
+        </div>
+      </div>
+      <div class="card-item-footer">
+        <button color="primary">
+          Buy
+        </button>
+      </div>
     </div>
   </div>
 </div>
