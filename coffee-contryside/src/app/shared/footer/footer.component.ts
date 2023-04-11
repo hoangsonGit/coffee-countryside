@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalConstant } from '../constants/global-constants';
 
 @Component({
   selector: 'app-footer',
@@ -12,4 +13,7 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openEmail(): void {
+    window.location.href = `mailto:${GlobalConstant.MAIL_RECEPIENT}?subject=${GlobalConstant.MAIL_SUBJECT}`;
+  }
 }

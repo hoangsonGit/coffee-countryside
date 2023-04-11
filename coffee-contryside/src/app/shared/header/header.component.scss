@@ -1,7 +1,23 @@
+.spacer {
+  flex: 1;
+}
+
 .toolbar {
   position: sticky;
   top: 0;
   z-index: 999;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #776bcc;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
 }
 
 .toolbar-login-logo {

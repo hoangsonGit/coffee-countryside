@@ -1,0 +1,15 @@
+.footerbar {
+    background-color: lightgray;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        margin: auto;
+    }
+
+    .e-mail-icon {
+        width: 40px;
+        cursor: pointer;
+    }
+}
