@@ -3,6 +3,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { GlobalConstant } from './shared/constants/global-constants';
 import { RoutingConstant } from './shared/constants/routing-constants';
 import { HeaderDisplayService } from './shared/header/services/header-display.service';
+import { FooterDisplayService } from './shared/footer/services/footer-display.service';
 
 @Component({
   selector: 'app-root',
@@ -16,14 +17,17 @@ export class AppComponent implements OnInit{
 
   constructor(
     private router: Router,
-    private headerDisplayService: HeaderDisplayService
+    private headerDisplayService: HeaderDisplayService,
+    private footerDisplayService: FooterDisplayService
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if(event.url.replace('/','') === RoutingConstant.LOGIN) {
           headerDisplayService.setHeaderDisplay(true);
+          footerDisplayService.setFooterDisplay(true);
         } else {
           headerDisplayService.setHeaderDisplay(false);
+          footerDisplayService.setFooterDisplay(false);
         }
       }
     });
@@ -31,5 +35,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.headerDisplayService.isHidden.subscribe(value => this.isHidden = value);
+    this.footerDisplayService.isHidden.subscribe(value => this.isHidden = value);
   }
 }

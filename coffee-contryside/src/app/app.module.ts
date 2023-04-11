@@ -10,12 +10,16 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { StaffManagementComponent } from './modules/staff-management/staff-management.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AdminManagementComponent } from './modules/admin-management/admin-management.component';
+import { FooterComponent } from './shared/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    StaffManagementComponent
+    StaffManagementComponent,
+    AdminManagementComponent,
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
