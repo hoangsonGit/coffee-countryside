@@ -11,8 +11,10 @@ import { RoutingConstant } from 'src/app/shared/constants/routing-constants';
 export class LoginComponent implements OnInit {
 
   // Dummy data for login
-  username: string = "admin";
-  password: string = "admin";
+  adminUsername: string = "admin";
+  adminPassword: string = "admin";
+  staffUsername: string = "staff";
+  staffPassword: string = "staff";
 
   loginForm = new FormGroup ({
     username: new FormControl(''),
@@ -21,9 +23,20 @@ export class LoginComponent implements OnInit {
 
   errorMessage: string = "";
 
+  alerts: Alert[] = Array.from(ALERTS);
+  isShow: boolean = false;
+
   constructor(
     private router: Router
   ) { }
+
+  close(alert: Alert) {
+		this.alerts.splice(this.alerts.indexOf(alert), 1);
+	}
+
+	reset() {
+		this.alerts = Array.from(ALERTS);
+	}
 
   ngOnInit(): void {
   }
@@ -34,7 +47,9 @@ export class LoginComponent implements OnInit {
     const passwordValue = this.loginForm.controls["password"].value;
 
     // Check validation
-    if (usernameValue === this.username && passwordValue === this.password) {
+    if (usernameValue === this.adminUsername && passwordValue === this.adminPassword) {
+      this.router.navigate([RoutingConstant.ADMIN_MANAGEMENT]);
+    } else if (usernameValue === this.staffUsername && passwordValue === this.staffPassword) {
       this.router.navigate([RoutingConstant.STAFF_MANAGEMENT]);
     } else {
       this.errorMessage = "Invalid username or password.";
@@ -42,6 +57,18 @@ export class LoginComponent implements OnInit {
   }
 
   backToHome() {
-    this.router.navigate([RoutingConstant.DASHBOARD]);
+    this.isShow = !this.isShow;
+    // this.router.navigate([RoutingConstant.DASHBOARD]);
   }
 }
+
+interface Alert {
+	type: string;
+	message: string;
+}
+
+const ALERTS: Alert[] = [
+	{
+		type: 'success',
+		message: 'This is an success alert',
+	}];
