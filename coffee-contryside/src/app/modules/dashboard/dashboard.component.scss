@@ -70,22 +70,4 @@
     transform: translateY(-3px);
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
-
-  .totop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: aqua;
-    border-radius: 50%;
-    display: flex;
-    cursor: pointer;
-    height: 80px;
-    width: 80px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .totop img {
-    width: 80px;
-  }
 }

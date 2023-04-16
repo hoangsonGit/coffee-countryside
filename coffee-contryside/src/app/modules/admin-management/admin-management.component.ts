@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TAB_LIST } from './models/admin-enum';
 
 @Component({
   selector: 'app-admin-management',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-management.component.scss']
 })
 export class AdminManagementComponent implements OnInit {
+
+  TAB_LIST = TAB_LIST;
 
   constructor() { }
 

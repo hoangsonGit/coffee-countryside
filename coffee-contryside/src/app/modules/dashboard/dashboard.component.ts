@@ -23,8 +23,4 @@ export class DashboardComponent implements OnInit {
   isCloseOutput() {
     this.isShow = false;
   }
-
-  backToTop() {
-    window.scrollTo(0, 0);
-  }
 }

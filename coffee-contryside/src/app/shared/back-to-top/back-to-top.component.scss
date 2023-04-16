@@ -1,0 +1,22 @@
+.totop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(145, 85, 253);
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.totop img {
+  width: 30px;
+}
+
+.totop:hover {
+  background-color: #804BDF;
+}

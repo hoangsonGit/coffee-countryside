@@ -22,4 +22,8 @@ export class HeaderComponent implements OnInit {
     this.headerDisplayService.setHeaderDisplay(true);
     this.router.navigate([RoutingConstant.LOGIN]);
   }
+
+  navigateDashboard() {
+    this.router.navigate([RoutingConstant.DASHBOARD]);
+  }
 }
