@@ -23,20 +23,9 @@ export class LoginComponent implements OnInit {
 
   errorMessage: string = "";
 
-  alerts: Alert[] = Array.from(ALERTS);
-  isShow: boolean = false;
-
   constructor(
     private router: Router
   ) { }
-
-  close(alert: Alert) {
-		this.alerts.splice(this.alerts.indexOf(alert), 1);
-	}
-
-	reset() {
-		this.alerts = Array.from(ALERTS);
-	}
 
   ngOnInit(): void {
   }
@@ -57,18 +46,6 @@ export class LoginComponent implements OnInit {
   }
 
   backToHome() {
-    this.isShow = !this.isShow;
-    // this.router.navigate([RoutingConstant.DASHBOARD]);
+    this.router.navigate([RoutingConstant.DASHBOARD]);
   }
 }
-
-interface Alert {
-	type: string;
-	message: string;
-}
-
-const ALERTS: Alert[] = [
-	{
-		type: 'success',
-		message: 'This is an success alert',
-	}];

@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './modules/login/login.module';
 import { HeaderComponent } from './shared/header/header.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { StaffManagementComponent } from './modules/staff-management/staff-management.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminManagementComponent } from './modules/admin-management/admin-management.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,6 @@ import { FooterComponent } from './shared/footer/footer.component';
     StaffManagementComponent,
     AdminManagementComponent,
     FooterComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -28,7 +27,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     LoginModule,
     DashboardModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
